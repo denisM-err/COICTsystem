@@ -6,7 +6,7 @@
     padding: 12px 20px;
     margin: 10px 20px;
     margin-right:  30px;
-    background-color: brown;
+    background-color: darkblue;
     color: white;
     border: none;
     border-radius:  5px;
@@ -16,6 +16,7 @@
     background-color: gray;
 }
 body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95));
     text-align: center;
     background-image: url(coict.jpg);
     background-size: cover;
@@ -29,4 +30,19 @@ body {
 body img{
     width: 100px;
     height: auto;
+}
+
+.about-page{
+    background: url(img.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin: 50px;
+    color: white;
+    font-size: 14px;
 }
