@@ -9,7 +9,7 @@
     background-color: darkblue;
     color: white;
     border: none;
-    border-radius:  5px;
+    border-radius:  10px;
     cursor: pointer;
 }
 .navigation button:hover {
