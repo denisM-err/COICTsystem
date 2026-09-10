@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html>
+    
     <head>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css"
         <title>
-            COICT-system</title>
+        
+       
+            COICT-system
+        </title>
     </head>
+    
 
     
 
     <body>
-        
+       
         <h1>UNIVERSITY OF DAR ES SALAAM</h1>
-        <img src="udsm-logo.png" alt="udsm-logo">
+        <img src="udsm-logo.png" alt="udsm-logo"
+        class="udsm-logo">
            <h2> COLLAGE OF INFORMATION AND COMMUNICATION TECHNOLOGY</h2>
 
 
@@ -31,32 +37,49 @@
            <p>CoICT is dedicated in providing quality education,research and innovation
             in Information and Communication Technologies
            </p>
+            <div class="dashboard">
+                 <div class="sidebar">
+                <h2>My dashboard </h2>
+                      <div class="navigation">
+         
+       <button onclick="openpage('index.html')">HOME</button>
+        
+       
+            <button onclick="openpage('about.html')">ABOUT COICT</button>
+        
+        
+            <button onclick="openpage('principal.html')">PRINCIPAL</button>
+        
+       
+            <button onclick="openpage('departments.html')">DEPERTMENTS</button>
+        
+       
+            <button onclick="openpage('students.html')">STUDENTS</button>
+        
+    
+            <button onclick="openpage('contacts.html')">CONTACTS</button>
+    
+        </div></div>
+           
+                
 
 
 
+    
+            
+            <div class="content">
+                <iframe id="pagecontent"></iframe>
+            </div></div>
+        
 
 
-          <div class="navigation">
-         <div> <a href="index.html">
-       <button>HOME</button>
-        </a>
-       <a href="about.html">
-            <button>ABOUT COICT</button>
-        </a>
-        <a href="principal.html">
-            <button>PRINCIPAL</button>
-        </a></div>
-       <div> <a href="departments.html">
-            <button>DEPERTMENTS</button>
-        </a>
-       <a href="students.html">
-            <button>STUDENTS</button>
-        </a>
-       <a href="contacts.html">
-            <button>CONTACTS</button>
-        </a></div>
-        </div>
+<script src="script.js"></script>
+    
+
     </body>
+
+
+
     <footer>
      © 2026 College of Information and Communication  Technologies- UDSM 
      <br>
