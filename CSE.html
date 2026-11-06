@@ -1,10 +1,56 @@
 <!DOCTYPE html>
 <html>
-    <head>
-
+<head>
+  <meta charset="UTF-8">
+  <title>CSE Department</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<h1><div><button>CSEstaffs</button></div>
-<div><button>courses offered</button></div>
-<div><button>students</button></div>
-<div><button></button></h1>
+<body>
+  <h1>Computer Science and Engineering</h1>
+
+  <div><button id="staff-btn">CSE staffs</button></div>
+  <div><button>courses offered</button></div>
+  <div><button>students</button></div>
+
+  <div id="staff-section" style="display:none;">
+    <h2>Academic Staff</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Status</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      <tbody id="staff-body"></tbody>
+    </table>
+  </div>
+
+  <script>
+    document.getElementById('staff-btn').addEventListener('click', function () {
+      fetch('http://localhost:3000/api/academic_staff')
+        .then(res => res.json())
+        .then(data => {
+          const body = document.getElementById('staff-body');
+          body.innerHTML = '';
+          data
+            .filter(s => s.department_id === 1)
+            .forEach(s => {
+              body.innerHTML += `
+                <tr>
+                  <td>${s.staff_member_id}</td>
+                  <td>${s.staff_member_name}</td>
+                  <td>${s.gender}</td>
+                  <td>${s.employment_status}</td>
+                  <td>${s.employment_type}</td>
+                </tr>`;
+            });
+          document.getElementById('staff-section').style.display = 'block';
+        })
+        .catch(err => console.error('Error:', err));
+    });
+  </script>
+</body>
 </html>

@@ -18,7 +18,7 @@
 body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95));
     text-align: center;
-    background-image: url(coict.jpg);
+    background-image: url(img.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -34,10 +34,14 @@ body img{
 }
 
 .about-page{
+    body {
+        color: white;
+    }
     background: url(img.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    
 }
 
 footer {
